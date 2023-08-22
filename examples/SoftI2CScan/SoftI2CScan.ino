@@ -1,17 +1,15 @@
-
 #include <SoftI2C.h>
 
-SoftI2C SoftWire =SoftI2C(10,5);
+SoftI2C SoftWire =SoftI2C(10, 5); //sda, scl
 
 void setup()
 {
   SoftWire.begin();
   
-  Serial.begin(2400);
+  Serial.begin(9600);
   while (!Serial);             // Leonardo: wait for serial monitor
   Serial.println("\nI2C Scanner");
 }
-
 
 void loop()
 {
