@@ -5,6 +5,10 @@
 [![Build Status](https://github.com/yasir-shahzad/SoftI2C/workflows/LibraryBuild/badge.svg)](https://github.com/yasir-shahzad/SoftI2C/actions)
 ![Hit Counter](https://visitor-badge.laobi.icu/badge?page_id=yasir-shahzad_SoftI2C)
 
+If you like **SoftI2C** - give it a star, or fork it and contribute!
+[![GitHub stars](https://img.shields.io/github/stars/yasir-shahzad/SoftI2C.svg?style=social&label=Star)](https://github.com/yasir-shahzad/SoftI2C/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yasir-shahzad/SoftI2C.svg?style=social&label=Fork)](https://github.com/yasir-shahzad/SoftI2C/network)
+
 The SoftI2C library provides an Arduino-compatible implementation of the I2C communication protocol using software-based methods. It allows you to perform I2C communication without relying on hardware I2C pins, which can be useful in situations where hardware I2C is unavailable or needs to be emulated.
 
 ## Features
