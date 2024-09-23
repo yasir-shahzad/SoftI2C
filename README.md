@@ -3,6 +3,7 @@
 [![Installation instructions](https://www.ardu-badge.com/badge/SoftI2C.svg?)](https://www.ardu-badge.com/SoftI2C)
 [![Commits since latest](https://img.shields.io/github/commits-since/yasir-shahzad/SoftI2C/latest)](https://github.com/yasir-shahzad/SoftI2C/commits/master)
 [![GitHub issues](https://img.shields.io/github/issues/yasir-shahzad/SoftI2C.svg)](https://github.com/yasir-shahzad/SoftI2C/issues)
+[![Downloads](https://img.shields.io/github/downloads/free-pdk/easy-pdk-programmer-software/total.svg?maxAge=3600)](https://github.com/free-pdk/easy-pdk-programmer-software/releases/latest)
 ![Hit Counter](https://visitor-badge.laobi.icu/badge?page_id=yasir-shahzad_SoftI2C)
 
 If you like **SoftI2C** - give it a star, or fork it and contribute!
