@@ -34,7 +34,7 @@ The SoftI2C library provides an Arduino-compatible implementation of the I2C com
 
    
 ## Contributing
-Contributions to the SoftI2C library are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request or open an issue on the GitHub repository.
+Contributions to the SoftI2C library are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request or open an issue on the GitHub repository..
 
 ## License
 This project is licensed under the MIT License.
