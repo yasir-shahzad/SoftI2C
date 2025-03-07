@@ -13,7 +13,10 @@ void SoftI2C::begin(void) {
   error = 0;
   isTransmitting = false;
 
-  i2cInit();
+  if (!i2cInit()) {  // Initialize I2C and check for bus lockup
+    Serial.println("I2C init failed! Check pull-ups or faulty module.");
+    delay(2000);
+  }
 }
 
 void SoftI2C::end(void) {
