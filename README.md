@@ -21,7 +21,7 @@ The SoftI2C library provides an Arduino-compatible implementation of the I2C com
 
 ## Installation
 
-1. Download the library ZIP file from the [GitHub repository](https://github.com/yasir-shahzad/SoftI2C).
+1. Download the library ZIP file from the [GitHub repository](https://github.com/yasir-shahzad/SoftI2C)..
 2. In the Arduino IDE, go to `Sketch` > `Include Library` > `Add .ZIP Library...`.
 3. Select the downloaded ZIP file and click `Open`.
 
