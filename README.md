@@ -17,7 +17,7 @@ The SoftI2C library provides an Arduino-compatible implementation of the I2C com
 - Software-based I2C communication.
 - Emulates I2C communication over GPIO pins.
 - Provides read and write functionality.
-- Easy-to-use API for I2C operations.
+- Easy-to-use API for I2C operations..
 
 ## Installation
 
