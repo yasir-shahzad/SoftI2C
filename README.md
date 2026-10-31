@@ -42,34 +42,65 @@ The public API takes **7-bit I2C addresses** (for example, `0x48`); do not shift
 ```cpp
 #include <SoftI2C.h>
 
-const uint8_t SDA_PIN = 10;
-const uint8_t SCL_PIN = 5;
-const uint8_t DEVICE_ADDRESS = 0x48;
-SoftI2C i2c(SDA_PIN, SCL_PIN); // SDA, SCL; external pull-ups assumed
+// Software I2C pins
+#define I2C_SDA 10
+#define I2C_SCL 5
 
-void setup() {
-  Serial.begin(9600);
-  i2c.begin();
+SoftI2C SoftWire(I2C_SDA, I2C_SCL);
+
+void setup()
+{
+    Serial.begin(9600);
+    SoftWire.begin();
+
+    Serial.println();
+    Serial.println("Software I2C Scanner");
+    Serial.println("--------------------");
 }
 
-void loop() {
-  i2c.beginTransmission(DEVICE_ADDRESS);
-  i2c.write(0x00); // Replace with the register required by your device.
+void loop()
+{
+    uint8_t error;
+    uint8_t deviceCount = 0;
 
-  uint8_t status = i2c.endTransmission(false);
-  if (status == 0) { // Keep the bus for a repeated start.
-    uint8_t count = i2c.requestFrom(DEVICE_ADDRESS, 2);
-    if (count == 2 && i2c.available() >= 2) {
-      int first = i2c.read();
-      int second = i2c.read();
-      Serial.println(first);
-      Serial.println(second);
+    Serial.println();
+    Serial.println("Scanning I2C bus...");
+
+    for (uint8_t address = 0x08; address <= 0x77; address++)
+    {
+        SoftWire.beginTransmission(address);
+        error = SoftWire.endTransmission();
+
+        if (error == 0)
+        {
+            Serial.print("Device found at 0x");
+
+            if (address < 0x10)
+                Serial.print("0");
+
+            Serial.println(address, HEX);
+            deviceCount++;
+        }
+        else if (error == 4)
+        {
+            Serial.print("I2C error at 0x");
+            Serial.println(address, HEX);
+        }
     }
-  } else {
-    i2c.endTransmission(); // Send a stop after a failed register-pointer write.
-  }
 
-  delay(1000);
+    Serial.println();
+
+    if (deviceCount == 0)
+    {
+        Serial.println("No I2C devices found.");
+    }
+    else
+    {
+        Serial.print("Total devices found: ");
+        Serial.println(deviceCount);
+    }
+
+    delay(5000);
 }
 ```
 
