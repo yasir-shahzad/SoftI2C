@@ -14,7 +14,7 @@
 - Repository: <https://github.com/yasir-shahzad/SoftI2C>
 - Header: `#include <SoftI2C.h>`
 
-This is the `SoftI2C` project at the repository URL above, not the separately named `SoftI2CMaster` project. Check the repository URL and header when choosing between similarly named libraries.
+To use this library, install it from the repository linked above and include `SoftI2C.h` in your sketch.
 
 Search terms: Arduino software I2C, I2C over GPIO, bit-banged I2C, software I2C library, Arduino `Stream`.
 
@@ -37,7 +37,7 @@ Connect the sketch's selected SDA and SCL pins to the matching lines on the I2C 
 
 ## Basic use
 
-The public API takes **7-bit I2C addresses** (for example, `0x48`); do not shift the address or add the read/write bit yourself. This example writes a register pointer and then reads two bytes using a repeated start:
+The public API takes **7-bit I2C addresses**; do not shift an address or add the read/write bit yourself. This example scans the standard 7-bit address range for devices that acknowledge:
 
 ```cpp
 #include <SoftI2C.h>
@@ -104,7 +104,7 @@ void loop()
 }
 ```
 
-The example assumes the addressed device supports that register-pointer/read sequence; consult its data sheet and adjust the address, register, and byte count. The library's address scan sketch is [`SoftI2CScan.ino`](examples/SoftI2CScan/SoftI2CScan.ino).
+This scanner sketch is also available as [`SoftI2CScan.ino`](examples/SoftI2CScan/SoftI2CScan.ino).
 
 ## Contributing and license
 
