@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Commits since latest](https://img.shields.io/github/commits-since/yasir-shahzad/SoftI2C/latest)](https://github.com/yasir-shahzad/SoftI2C/commits/master)
 [![GitHub issues](https://img.shields.io/github/issues/yasir-shahzad/SoftI2C.svg)](https://github.com/yasir-shahzad/SoftI2C/issues)
+[Hit Counter](https://visitor-badge.laobi.icu/badge?page_id=yasir-shahzad_SoftI2C)
 
 **SoftI2C** is an Arduino-compatible software I2C (bit-banged I2C) library that uses GPIO pins selected by the sketch. It provides I2C-style write/read operations through a class that implements Arduino's `Stream` interface.
 
